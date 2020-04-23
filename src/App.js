@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+const api = {
+  key: "7650e128a6abf7511604586d543b3b21",
+  base: "https://api.openweathermap.org/data/2.5/"
+}
 
 function App() {
+  const dateBuilder = (d) => {
+
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <main>
+        <div className="search-box">
+          <input type="text" className="search-bar" placeholder="Where's the weather?">
+          </input>
+        </div>
+        <div className="location-box">
+          <div className="location">Charlotte, NC
+          </div>
+          <div className="date"></div>
+            {dateBuilder(new Date())}
+          </div>
+      </main>
     </div>
   );
 }
